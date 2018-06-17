@@ -26,6 +26,8 @@ export class CockpitComponent implements OnInit {
   onAddServer(nameInput: HTMLInputElement) {
     this.serverCreated.emit({
       // Below are basically two ways to do the same thing
+      // nativeElement is a property of ElementRef, does just what the name implies...
+      // gets the native element (in this case, an input) of s..ContentInput
       serverName: nameInput.value,
       serverContent: this.serverContentInput.nativeElement.value
     });
